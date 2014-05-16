@@ -1,0 +1,42 @@
+db.usuarios.save({nombre:'Juan',edad:23,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'ooooo',edad:23,email:'ww@ww.com',genero:1,activo:true})
+db.usuarios.save({nombre:'KKK',edad:13,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'DDD',edad:14,email:'f@f.com',genero:1,activo:true})
+db.usuarios.save({nombre:'TTT',edad:21,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'BBB',edad:22,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'D',edad:23,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'AAAAA',edad:26,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'rrrrrr',edad:22,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'ttttt',edad:28,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'ppppp',edad:21,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'qqqqqq',edad:20,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'bbbb',edad:15,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'nnn',edad:22,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'llll',edad:40,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'zzzzz',edad:10,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'wwwww',edad:32,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'tttt',edad:23,email:'a@a.com',genero:1,activo:true})
+db.usuarios.save({nombre:'bbbb',edad:19,email:'a@a.com',genero:0,activo:true})
+db.usuarios.save({nombre:'Ju',edad:23,email:'a@a.com',genero:1,activo:true})
+
+
+db.usuarios.findOne()
+
+db.usuarios.find({edad: {$lte:25} , edad:{$gte:23}})
+
+db.usuarios.find( { $and:[ {edad: {$lte:25}, edad:{$gte:23}} ] } )
+
+
+db.usuarios.find({ edad:{ $nin:[20,19,25] } })
+
+db.usuarios.find({ nombre:{ $nin:['Juan','bbbb'] } })
+
+db.usuarios.find({ correo:{$exists: true }})
+
+db.usuarios.find({ email:{$exists: true }})
+
+
+
+
+
+
